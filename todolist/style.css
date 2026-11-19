@@ -1,0 +1,235 @@
+
+/* GENERAL RESET */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* BODY */
+body {
+    font-family: 'Segoe UI', Arial, sans-serif;
+    background: linear-gradient(135deg, #eeeaff, #f8f7ff);
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+    color: #292544;
+}
+
+/* MAIN CONTAINER */
+.container {
+    background: #ffffff;
+    width: 100%;
+    max-width: 600px;
+    padding: 35px;
+    border-radius: 20px;
+    box-shadow: 0 12px 40px rgba(75, 60, 130, 0.12);
+}
+
+/* HEADING */
+h1 {
+    font-size: 30px;
+    font-weight: 700;
+    text-align: center;
+    color: #5143a5;
+    margin-bottom: 8px;
+}
+
+h1::after {
+    content: "Organize your day, one task at a time.";
+    display: block;
+    font-size: 14px;
+    font-weight: 400;
+    color: #9993ad;
+    margin-top: 10px;
+}
+
+/* INPUT SECTION */
+.input-section {
+    display: flex;
+    gap: 12px;
+    margin: 30px 0;
+}
+
+/* INPUT */
+input {
+    flex: 1;
+    min-width: 0;
+    padding: 14px 16px;
+    border: 1px solid #e5e1f0;
+    border-radius: 10px;
+    font-size: 15px;
+    outline: none;
+    background: #faf9ff;
+    transition: 0.3s;
+}
+
+input:focus {
+    border-color: #8171dc;
+    box-shadow: 0 0 0 3px rgba(129, 113, 220, 0.12);
+}
+
+/* ALL BUTTONS */
+button {
+    border: none;
+    border-radius: 9px;
+    padding: 11px 15px;
+    font-size: 13px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: 0.2s;
+}
+
+/* ADD BUTTON */
+#addBtn {
+    background: #7061c9;
+    color: white;
+    padding: 14px 22px;
+    font-size: 14px;
+}
+
+#addBtn:hover {
+    background: #5748ad;
+    transform: translateY(-2px);
+}
+
+/* TASK LIST */
+ul {
+    list-style: none;
+}
+
+/* INDIVIDUAL TASK */
+li {
+    display: flex;
+    align-items: center;
+    gap: 9px;
+    padding: 15px;
+    margin-bottom: 12px;
+    background: #faf9ff;
+    border: 1px solid #eeeaf8;
+    border-radius: 12px;
+    transition: 0.2s;
+}
+
+li:hover {
+    background: #f5f2ff;
+    border-color: #ded7f7;
+}
+
+/* TASK TEXT */
+li span {
+    flex: 1;
+    min-width: 0;
+    font-size: 14px;
+    overflow-wrap: anywhere;
+    color: #39344d;
+}
+
+/* COMPLETE BUTTON */
+li button:nth-of-type(1) {
+    background: #e4f5ec;
+    color: #278354;
+}
+
+li button:nth-of-type(1):hover {
+    background: #c9eedb;
+}
+
+/* EDIT BUTTON */
+li button:nth-of-type(2) {
+    background: #fff0d9;
+    color: #b77920;
+}
+
+li button:nth-of-type(2):hover {
+    background: #ffe4b8;
+}
+
+/* DELETE BUTTON */
+li button:nth-of-type(3) {
+    background: #ffe7e7;
+    color: #d34b4b;
+}
+
+li button:nth-of-type(3):hover {
+    background: #ffd0d0;
+}
+
+/* MOBILE RESPONSIVENESS */
+@media (max-width: 480px) {
+    .container {
+        padding: 22px 16px;
+    }
+
+    li {
+        flex-wrap: wrap;
+    }
+
+    li span {
+        flex-basis: 100%;
+        margin-bottom: 5px;
+    }
+
+    .input-section {
+        gap: 7px;
+    }
+
+    #addBtn {
+        padding: 12px;
+    }
+}
+
+/* TASK STATISTICS */
+.stats {
+    display: flex;
+    gap: 12px;
+    margin-bottom: 25px;
+}
+
+.stat-card {
+    flex: 1;
+    background: #f5f2ff;
+    padding: 15px 8px;
+    border-radius: 12px;
+    text-align: center;
+}
+
+.stat-card h3 {
+    font-size: 24px;
+    color: #7061c9;
+    margin-bottom: 5px;
+}
+
+.stat-card p {
+    font-size: 12px;
+    color: #77718d;
+}
+/* FILTER BUTTONS */
+.filters {
+    display: flex;
+    gap: 10px;
+    margin-bottom: 20px;
+}
+
+.filter-btn {
+    flex: 1;
+    background: #f1eff8;
+    color: #7061c9;
+}
+
+.filter-btn.active {
+    background: #7061c9;
+    color: white;
+}
+
+.filter-btn:hover {
+    background: #ded8f8;
+    color: #5143a5;
+}
+
+.filter-btn.active:hover {
+    background: #5748ad;
+    color: white;
+}
